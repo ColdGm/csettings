@@ -38,6 +38,8 @@ struct _CS_FILE_* _CS_OpenFile(const char* fileName, size_t csObjectSize)
 
 int _CS_CloseFile(void* handle)
 {
+	if (!CS_IsValidHandle(handle))
+		return CS_E_HANDLE;
 	struct _CS_NODE_* prev = NULL;
 	struct _CS_NODE_* node = g_FileList.head;
 	while(node)

@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
 	{
         printf("%s\t%s\t\t%s\n", i->group, i->key, i->value);
 	}
+    CS_INI_Sync(handle, "./test.ini");
     CS_INI_Close(handle);
     //getchar();
     return 0;

@@ -59,6 +59,7 @@ extern "C"
 	int CS_INI_Close(void* handle);
 	char* CS_INI_Value(void* handle, const char* key);
 	int	CS_INI_SetValue(void* handle, const char* key, const char* value);
+	int CS_INI_Sync(void* handle, const char* fileName);
 #ifdef __cplusplus
 }
 #endif
